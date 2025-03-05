@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /*background-image: url(../images/casto-iron-grill-restaurants-luton-about.webp);*/
+    background-color: #f0f0f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #6b697a;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo h1:hover {
+    color: #ffff99;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #71addf;
+}
+
+.hero {
+    background: linear-gradient(135deg, #bd84bd 0%, #567d94 100%);
+    background-image: url(../images/casto-iron-grill-restaurants-luton-about.webp);
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+/*@keyframes heroAnimation {
+    0% {
+        background: linear-gradient(135deg, #4f4f7c 0%, #9e9896 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #c791b8 0%, #959dad 100%);
+    }
+}*/
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.product {
+    background-color: rgb(240, 226, 226);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+    color: #99678c;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background-color: #636e83;
+    color: rgb(241, 234, 234);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product button:hover {
+    background-color: #526877;
+}
+
+#cart {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#paypal-button-container {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #3498db; /* Soft Blue for PayPal button container */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2c3e50; /* Navy Blue for footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#home {
+    background-color: #3498db; /* Soft Blue for the home section */
+    color: white;
+}
+
+#menu {
+    background-color: #ecf0f1; /* Light Gray for the menu section */
+    color: #2c3e50; /* Navy Blue for text */
+}
+
+#about {
+    background-color: #ecf0f1; /* Light Gray for the about section */
+    color: #2c3e50; /* Navy Blue for text */
+}
+
+#contact {
+    background-color: #ecf0f1; /* Light Gray for the contact section */
+    color: #2c3e50; /* Navy Blue for text */
+}
+
+#payment {
+    background-color: #ecf0f1; /* Light Gray for the payment section */
+    color: #2c3e50; /* Navy Blue for text */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+.c {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 50%;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.text-content h2 {
+    font-size: 32px;
+    color: #353232;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #494747;
+}

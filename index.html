@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_ACTUAL_CLIENT_ID"></script> <!-- Replace with your PayPal Client ID -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Steak Restaurant</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#payment">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Steak!</h2>
+            <p>Experience the finest steaks and gourmet meals.</p>
+        </section>
+
+        <div class="c">
+            <div class="image-gallery">
+                <img src="../images/meat3.jpg" alt="Delicious dish">
+                <img src="../images/meat1.jpg" alt="Tasty meal">
+                <img src="../images/meat 4.jpg" alt="Gourmet dish">
+                <img src="../images/meat5.jpg" alt="Exquisite food">
+            </div>
+            <div class="text-content">
+                <h2>Steaks and More</h2>
+                <p>The Grill is famous for its fresh cuts of steak, but don’t let our other dishes pass you by!</p>
+                <p>Our head chef has created a range of classic dishes with exotic twists that are ideal for starting your meal or as a main course. Vegetarian options are also available!</p>
+                <p>Be sure to leave room for dessert, crafted by our Head of Pastry, Chef Wyman, who has created a magical selection of sweet dishes that are true works of art.</p>
+            </div>
+        </div>
+
+        <section class="products">
+            <!-- Existing product items -->
+            <div class="product">
+                <img src="../images/bbq.jpg" alt="BBQ Ribs">
+                <h3>BBQ Ribs</h3>
+                <p>$19.99</p>
+                <button onclick="addToCart('BBQ Ribs', 19.99)">Order Now - $19.99</button>
+            </div>
+
+            <div class="product">
+                <img src="../images/gril steak.jpg" alt="Grilled Steak">
+                <h3>Grilled Steak</h3>
+                <p>$25.99</p>
+                <button onclick="addToCart('Grilled Steak', 25.99)">Order Now - $25.99</button>
+            </div>
+
+            <div class="product">
+                <img src="../images/T-bone.jpg" alt="T-bone Steak">
+                <h3>T-bone Steak</h3>
+                <p>$29.99</p>
+                <button onclick="addToCart('T-Bone Steak', 29.99)">Order Now - $29.99</button> <!-- Fixed price display -->
+            </div>
+
+            <!-- New Products -->
+            <div class="product">
+                <img src="../images/caesar salad.jpg" alt="Caesar Salad">
+                <h3>Caesar Salad</h3>
+                <p>$28.99</p>
+                <button onclick="addToCart('Caesar Salad', 28.99)">Order Now - $28.99</button> <!-- Fixed typo -->
+            </div>
+
+            <div class="product">
+                <img src="../images/lobster tail.jpg" alt="Lobster Tail">
+                <h3>Lobster Tail</h3>
+                <p>$35.99</p>
+                <button onclick="addToCart('Lobster Tail', 35.99)">Order Now - $35.99</button>
+            </div>
+
+            <div class="product">
+                <img src="../images/ribeye.jpg" alt="Ribeye steak">
+                <h3>Ribeye Steak</h3>
+                <p>$28.99</p>
+                <button onclick="addToCart('Ribeye Steak', 28.99)">Order Now - $28.99</button>
+            </div>
+        </section>
+
+        <section id="payment">
+            <h2>Payment</h2>
+            <p>Review your order and proceed to payment.</p>
+            <button onclick="toggleCart()">View Cart (<span id="cart-count">0</span>)</button>
+            <div id="cart" style="display: none;">
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+            <div id="paypal-button-container"></div>
+        </section>
+
+        <br>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7f3c0c7d6d2d8c99dd0dcde">[email&#160;protected]</a> | Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2025 excellent choice!. All Rights Reserved.</p>
+    </footer>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91aa214febe5674e',t:'MTc0MTAxNTM1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
