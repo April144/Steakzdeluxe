@@ -63,3 +63,36 @@ function checkout() {
         }).render('#paypal-button-container');
     }
 }
+
+// Login Functions
+function showLoginModal() {
+    document.getElementById("login-modal").style.display = "block";
+    document.getElementById("modal-overlay").style.display = "block";
+}
+
+function hideLoginModal() {
+    document.getElementById("login-modal").style.display = "none";
+    document.getElementById("modal-overlay").style.display = "none";
+}
+
+function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const role = document.getElementById("role").value;
+
+    // Hardcoded credentials (for demo purposes)
+    const credentials = {
+        user: { username: "user", password: "user123" },
+        admin: { username: "admin", password: "admin123" },
+        manager: { username: "manager", password: "manager123" }
+    };
+
+    if (credentials[role].username === username && credentials[role].password === password) {
+        isLoggedIn = true;
+        userRole = role;
+        alert(`Logged in successfully as ${role}`);
+        hideLoginModal();
+    } else {
+        alert("Invalid credentials!");
+    }
+}

@@ -19,12 +19,13 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#payment">Payment</a></li>
+                <li><a href="#" onclick="showLoginModal()">Login</a></li> 
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <h2>Welcome to Steak!</h2>
             <p>Experience the finest steaks and gourmet meals.</p>
         </section>
@@ -36,7 +37,7 @@
                 <img src="../images/meat 4.jpg" alt="Gourmet dish">
                 <img src="../images/meat5.jpg" alt="Exquisite food">
             </div>
-            <div class="text-content">
+            <div class="text-content" id="about">
                 <h2>Steaks and More</h2>
                 <p>The Grill is famous for its fresh cuts of steak, but don’t let our other dishes pass you by!</p>
                 <p>Our head chef has created a range of classic dishes with exotic twists that are ideal for starting your meal or as a main course. Vegetarian options are also available!</p>
@@ -44,7 +45,7 @@
             </div>
         </div>
 
-        <section class="products">
+        <section class="products" id="menu">
             <!-- Existing product items -->
             <div class="product">
                 <img src="../images/bbq.jpg" alt="BBQ Ribs">
@@ -109,6 +110,24 @@
             <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7f3c0c7d6d2d8c99dd0dcde">[email&#160;protected]</a> | Phone: (123) 456-7890</p>
         </section>
     </main>
+
+    <!-- Login Modal -->
+    <div id="login-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1001;">
+        <h3>Login</h3>
+        <select id="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+        </select>
+        <input type="text" id="username" placeholder="Username" style="margin: 10px 0;">
+        <input type="password" id="password" placeholder="Password" style="margin: 10px 0;">
+        <button onclick="login()">Login</button>
+        <button onclick="hideLoginModal()">Close</button>
+    </div>
+
+    <!-- Overlay for Modal -->
+    <div id="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000;"></div>
+
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
